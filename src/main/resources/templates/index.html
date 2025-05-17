@@ -1,26 +1,25 @@
+<!-- templates/index.html -->
 <!DOCTYPE html>
 <html lang="en">
 
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="https://cdn.tailwindcss.com"></script>
-        <title>Task 1</title>
+        <title>Danh sách người dùng</title>
     </head>
 
-    <body class="bg-gray-100 min-h-screen flex items-center justify-center">
-
+    <body class="bg-gray-100 flex items-center justify-center min-h-screen">
         <div class="bg-white p-8 rounded shadow-md w-full max-w-md text-center">
             <h1 class="text-3xl font-bold text-blue-600 mb-6">Nhóm 5</h1>
-
             <nav>
                 <ul class="space-y-2 text-lg text-gray-800">
-                    <li class="border-b pb-2">Ngô Văn Sơn</li>
-                    <li class="border-b pb-2">Nguyễn Xuân Thành</li>
+                    <li th:each="user : ${users}" class="border-b pb-2">
+                        <a th:href="@{/user(id=${user.id})}" class="text-blue-500 hover:underline"
+                            th:text="${user.name}">Tên người dùng</a>
+                    </li>
                 </ul>
             </nav>
         </div>
-
     </body>
 
 </html>

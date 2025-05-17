@@ -1,0 +1,20 @@
+<!-- templates/user-detail.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <title>Chi tiết người dùng</title>
+    </head>
+
+    <body class="bg-gray-100 flex items-center justify-center min-h-screen">
+        <div class="bg-white p-8 rounded shadow-md w-full max-w-md text-left">
+            <a href="/" class="text-blue-500 hover:underline">&larr; Quay lại</a>
+            <h1 class="text-2xl font-bold text-blue-600 mb-4" th:text="${user.name}">Tên</h1>
+            <p class="mb-2"><strong>Email:</strong> <span th:text="${user.email}">Email</span></p>
+            <p><strong>Mô tả:</strong> <span th:text="${user.description}">Mô tả</span></p>
+        </div>
+    </body>
+
+</html>
