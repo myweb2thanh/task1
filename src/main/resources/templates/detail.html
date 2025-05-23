@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Chi tiết thành viên</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gradient-to-r from-blue-50 to-white min-h-screen flex items-center justify-center p-6">
+<div class="bg-white p-10 rounded-lg shadow-lg w-full max-w-md text-center border border-gray-200">
+    <h1 class="text-3xl font-extrabold text-blue-700 mb-6" th:text="${fullName}">Tên thành viên</h1>
+    <div class="space-y-4 text-left">
+        <p class="text-gray-700 text-lg"><span class="font-semibold">Tuổi:</span> <span th:text="${age}">-</span></p>
+        <p class="text-gray-700 text-lg"><span class="font-semibold">Trường:</span> <span th:text="${school}">-</span></p>
+        <p class="text-gray-700 text-lg"><span class="font-semibold">Năm sinh:</span> <span th:text="${birthYear}">-</span></p>
+    </div>
+    <a href="/"
+       class="inline-block mt-8 px-6 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors duration-300">
+        ← Quay lại
+    </a>
+</div>
+</body>
+
+</html>
