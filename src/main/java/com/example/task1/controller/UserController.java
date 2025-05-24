@@ -1,9 +1,6 @@
 package com.example.task1.controller;
 
-
-
-
-import com.example.task1.entity.User;
+import com.example.task1.model.User;
 import com.example.task1.repository.UserRepository;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
